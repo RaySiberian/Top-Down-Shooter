@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1467056054337869959
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8136565455258963695}
+  m_Layer: 0
+  m_Name: BulletSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8136565455258963695
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1467056054337869959}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.253, y: -0.967, z: -0.46263018}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8684135513803155074}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8684135513803155075
 GameObject:
   m_ObjectHideFlags: 0
@@ -30,6 +60,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8684135513863895221}
+  - {fileID: 8136565455258963695}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -46,7 +77,7 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.20876276, y: -0.8424401}
+  m_Offset: {x: 0.04, y: 0.02}
   serializedVersion: 2
   m_Radius: 0.54701626
 --- !u!114 &8684135513803155325
@@ -65,6 +96,9 @@ MonoBehaviour:
   anim: {fileID: 8684135513863895220}
   deathTriggerName: Dead
   player: {fileID: 0}
+  bulletPrefabEnemy: {fileID: 5308600449368443707, guid: 43f4ebfedb478ee4e8be8f78ed75f984,
+    type: 3}
+  bulletSpawnPosition: {fileID: 8136565455258963695}
 --- !u!1 &8684135513863895226
 GameObject:
   m_ObjectHideFlags: 0
@@ -91,7 +125,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8684135513863895226}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.14, z: 0}
+  m_LocalPosition: {x: -0.2, y: -1.31, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8684135513803155074}

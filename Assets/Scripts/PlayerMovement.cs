@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -6,7 +5,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private Animator animator;
     [SerializeField] private string moveSpeed;
-    
+
     private Rigidbody2D rb;
 
     private void Awake()
@@ -25,14 +24,14 @@ public class PlayerMovement : MonoBehaviour
         var direction = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
 
         rb.velocity = direction * speed;
-        animator.SetFloat(moveSpeed,direction.magnitude);
+        animator.SetFloat(moveSpeed, direction.magnitude);
     }
 
     private void Rotate()
     {
         var mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        var direction = (mousePosition - transform.position);
-        
-        transform.up = -((Vector2) direction);
+        var direction = mousePosition - transform.position;
+
+        transform.up = -(Vector2) direction;
     }
 }
